@@ -1,0 +1,7 @@
+.road {
+    background-image: url("road.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }

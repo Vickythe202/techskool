@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Route - Revolutionizing Urban Mobility and Driving Safety</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    /* Reset styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Global styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    /* Header styles */
+    .hero {
+      background-image: linear-gradient(to right, #007a5e, #00a382);
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #fff;
+      
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #fff;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007a5e;
+    }
+
+    /* Content styles */
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    .content ul {
+      list-style-type: none;
+      margin-bottom: 1.5rem;
+      padding: 0 1rem; /* Add padding to the list */
+    }
+
+    .content li {
+      margin-bottom: 0.5rem;
+      padding-left: 2rem; /* Add padding to list items */
+      position: relative; /* For bullet styling */
+    }
+
+    .content li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background-color: #007a5e;
+      border-radius: 50%;
+    }
+
+    /* Feature Section */
+    .feature {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .feature img {
+      max-width: 80%;
+      margin-bottom: 1rem;
+    }
+
+    .feature h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      text-align: center;
+      max-width: 600px;
+      
+    }
+
+    /* Call to Action */
+    .cta {
+      background-color: #007a5e;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+      border-radius: 5px;
+      margin-top: 2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta:hover {
+      background-color: #00a382;
+    }
+
+    /* Footer styles */
+    footer {
+      background-image: linear-gradient(to right, #007a5e, #00a382);
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer img {
+      max-height: 60px;
+      max-width: 60px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* Media Queries */
+    @media (min-width: 768px) {
+      header {
+        padding: 4rem 1rem;
+      }
+
+      header h1 {
+        font-size: 4rem;
+      }
+
+      header p {
+        font-size: 2rem;
+      }
+
+      .content {
+        padding: 4rem 2rem;
+      }
+
+      .content ul {
+        padding: 0 2rem; /* Increase padding for larger screens */
+      }
+
+      .content li {
+        padding-left: 3rem; /* Increase padding for larger screens */
+      }
+
+      .feature {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .feature img {
+        max-width: 50%;
+        margin-right: 3rem;
+        margin-bottom: 0;
+      }
+
+      .feature h2 {
+        font-size: 3rem;
+      }
+
+      .feature p {
+        font-size: 1.5rem;
+        padding: 0;
+      }
+
+      footer {
+        padding: 2rem;
+        font-size: 1.2rem;
+      }
+
+      footer img {
+        max-height: 80px;
+        max-width: 80px;
+        margin-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>Safe Driving Practices</h1>
+      <p>Empowering you to drive safely on the road.</p>
+    </section>
+
+    <section class="content">
+      <h2>Safety Tips and Alerts</h2>
+      <p>The Safe Route app is designed to revolutionize urban mobility and driving safety by providing real-time safety alerts, driver monitoring, and gamification features to encourage responsible driving habits.</p>
+      <p>
+        Here's a comprehensive guide to safe driving practices, incorporating the features of the Safe Route app:
+      </p>
+      <h2>Pre-Trip Preparation:</h2>
+        <ul>
+      <li><strong>
+        Vehicle Check:
+      </strong>Before starting your journey, ensure your vehicle is in good working order. Check tire pressure, fluid levels (oil, coolant, brake fluid), lights, wipers, and overall condition.</li>
+      <li><strong>
+        Plan Your Route:
+      </strong>Familiarize yourself with your destination and any potential hazards along the way. Use navigation apps to avoid traffic congestion and unfamiliar areas.</li>
+      <li><strong>
+        Rest and hydration:
+      </strong>Avoid driving when tired or drowsy. Get enough sleep the night before and take breaks during long trips to stretch and rehydrate.</li>
+      <li><strong>
+      Adjust Your Seat and Mirrors:
+      </strong>Ensure you have a comfortable driving position and clear visibility through all mirrors.</li>
+        </ul>
+
+
+        <h2>Defensive Driving Techniques:</h2>
+        <ul>
+      <li><strong>
+        Anticipate Hazards:
+      </strong>Be aware of your surroundings and anticipate potential dangers. Look ahead, scan intersections, and be prepared to react quickly.</li>
+      <li><strong>
+        Maintain Safe Following Distance: 
+      </strong>Leave enough space between you and the vehicle in front. This allows you to react in case of sudden braking or unexpected events.</li>
+      <li><strong>
+        Avoid Distractions:
+      </strong>Put away your phone, avoid eating while driving, and minimize conversations that could distract you from the road. The Safe Route app can help you avoid distractions by detecting when you're using your phone while driving and reminding you to keep your eyes on the road.</li>
+      <li><strong>
+        Be Aware of Weather Conditions:
+      </strong>Adjust your speed and driving style according to rain, snow, fog, or other adverse weather conditions. The Safe Route app will alert you to any hazardous driving conditions, such as heavy rain, snow, or icy roads, so you can adjust your driving accordingly.</li>
+      <li><strong>
+        Respect Speed Limits:
+      </strong>Adhere to posted speed limits, especially in school zones and residential areas. Speeding reduces reaction time and increases the severity of accidents. The Safe Route app will notify you when you're approaching or exceeding the posted speed limit, encouraging you to adjust your speed accordingly.</li>
+      <li><strong>
+        Signal Properly: 
+      </strong>Use your turn signals to indicate your intentions clearly to other drivers.</li>
+      <li><strong>
+        Yield to Pedestrians and Cyclists:
+      </strong>Be extra cautious when approaching crosswalks and intersections, giving pedestrians and cyclists the right of way.</li>
+      <li><strong>
+        Stay in Your Lane:
+      </strong>Avoid weaving in and out of traffic and maintain a consistent lane position.</li>
+      <li><strong>
+        Be Patient and Courteous:
+      </strong>Avoid aggressive driving behaviors like tailgating, road rage, or cutting off other vehicles.
+    </li>
+        </ul>
+
+
+        <h2>Driving at Night:</h2>
+        <ul>
+      <li><strong>
+        Use Headlights:
+      </strong>Ensure your headlights are on, even during twilight hours.
+    </li>
+      <li><strong>
+        Reduce Speed:
+      </strong>Reduce your speed at night to allow for increased reaction time and better visibility.</li>
+      <li><strong>
+        Avoid Distractions:
+      </strong>Resist the urge to use your phone or other devices while driving at night.</li>
+      <li><strong>
+        Be Aware of Wildlife:
+      </strong>Be extra cautious in areas with wildlife, as animals are more active at night.
+    </li>
+        </ul>
+
+
+        <h2>Driving in Adverse Weather:</h2>
+        <ul>
+      <li><strong>
+        Rain: 
+      </strong>Reduce speed, increase following distance, and use your headlights. Avoid driving through flooded areas.</li>
+      <li><strong>
+        Snow:
+      </strong> Use snow tires or chains if necessary. Reduce speed, increase following distance, and avoid sudden maneuvers.</li>
+      <li><strong>
+       Fog:
+      </strong>Reduce speed, use your headlights, and avoid using your high beams.</li>
+      <li><strong>
+       Ice:
+      </strong>Drive slowly and cautiously. Avoid abrupt braking or accelerating.</li>
+        </ul>
+
+
+        <h2>Emergency Situations:</h2>
+        <ul>
+      <li><strong>
+        Know Your Emergency Kit: 
+      </strong>Keep a well-stocked emergency kit in your vehicle, including a first aid kit, flashlight, jumper cables, and a blanket.</li>
+      <li><strong>
+        Stay Calm:
+      </strong> If you find yourself in an emergency situation, stay calm and assess the situation.</li>
+      <li><strong>
+       Call for Help:
+      </strong>If necessary, call emergency services immediately.</li>
+        </ul>
+
+
+        <h2>Additional Tips:</h2>
+        <ul>
+      <li><strong>
+        Stay Informed:
+      </strong> Keep up-to-date on traffic conditions and road closures. The Safe Route app can help you stay informed about accident-prone areas and other potential hazards.</li>
+      <li><strong>
+        Take a Defensive Driving Course:
+      </strong> A defensive driving course can teach you valuable skills and techniques to stay safe on the road.</li>
+      <li><strong>
+        Maintain Your Vehicle:
+      </strong>Regular maintenance helps prevent breakdowns and ensures your vehicle is in optimal condition.</li>
+      <li><strong>
+        Be a Role Model:
+       </strong>Set a good example for other drivers by following safe driving practices.
+    </li>
+        </ul>
+
+
+
+        
+        <h2>Safe Route App Features:</h2>
+        <ul>
+      <li><strong>
+        Safety Tips and Alerts:
+      </strong> The Safe Route app provides real-time safety alerts and tips to help drivers stay aware and responsive on the road.</li>
+      <li><strong>
+        Speed Limit Warnings: 
+      </strong>The app will notify you when you're approaching or exceeding the posted speed limit, encouraging you to adjust your speed accordingly.</li>
+      <li><strong>
+        Accident-Prone Area Alerts:
+      </strong>The app will warn you about known accident-prone areas, so you can be extra vigilant when passing through these locations.</li>
+      <li><strong>
+        Hazardous Condition Notifications:
+       </strong>The app will alert you to any hazardous driving conditions, such as heavy rain, snow, or icy roads, so you can adjust your driving accordingly.
+    </li>
+    <li><strong>
+        Driver Monitoring:
+       </strong>The Safe Route app utilizes the sensors in your smartphone or connected devices to monitor your driving behavior. This allows us to provide personalized feedback and recommendations to help you improve your driving skills.
+    </li>
+    <li><strong>
+        Speed Tracking:
+       </strong>The app tracks your vehicle's speed and compares it to the posted speed limits, providing feedback on any excessive or unsafe speeds.
+    </li>
+    <li><strong>
+        Harsh Braking Detection:
+       </strong>The app can detect instances of harsh or abrupt braking, which may indicate distracted or unsafe driving.
+    </li>
+    <li><strong>
+        Distracted Driving Detection:
+       </strong>The app can detect when you're using your phone while driving, reminding you to keep your eyes on the road.</li>
+    <li><strong>
+        Gamification and Rewards:
+       </strong>To further encourage safe driving practices, the Safe Route app incorporates gamification elements. Users can earn rewards and achievements for demonstrating safe driving behaviors.</li>
+    <close>
+    <h2>REMEMBER:</h2>
+    <p>
+        Safe driving is a shared responsibility. By following these practices and utilizing the Safe Route app, you can contribute to a safer driving environment for yourself and others.
+    </p>
+    </close>
+  </ul>
+    </section>
+  </main>
+
+  
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Safe Route. All rights reserved.</p>
+      | Powered by <a href="https://www.techskool.org/">Techskool Education</a><img src="techlogo.png" alt="TechSkool Logo"></p>
+      <div class="social-links">
+        <a href="https://x.com/techskooledu">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/techskooledu/">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://ng.linkedin.com/company/techskooledu">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+      <div>
+        <a href="https://x.com/techskooledu">Twitter</a> | <a href="https://www.instagram.com/techskooledu/">Instagram</a> | <a href="https://ng.linkedin.com/company/techskooledu">LinkedIn</a>
+      </div>
+
+  <script>
+    // Matching the "About" page
+    window.addEventListener('DOMContentLoaded', () => {
+      const navLinks = document.querySelectorAll('nav ul li a');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetPage = e.target.getAttribute('href');
+          window.location.href = targetPage;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

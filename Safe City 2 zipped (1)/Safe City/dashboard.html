@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeRoute</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+       /* Adjust the body styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('loc.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    flex-direction: column;
+}
+
+    /* Adjust the container styles */
+.contain {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+    gap: 30px;
+    background-color: rgba(11, 15, 25, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 90%;
+    width: 100%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .contain {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+/* Adjust the feature styles */
+.feature {
+    background-color: #1C2233;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #ADADAD;
+    margin-top: 0;
+}
+    </style>
+</head>
+<body>
+   
+    <div class="contain">
+        <a href="./real-timeinformation.html">
+            <div class="feature" onclick="handleFeatureClick('search')">
+                <img src="traffic.png" alt="Real-traffic information">
+                <h3>Real-traffic information</h3>
+                <p>Get accurate real-time traffic updates.</p>
+            </div>
+        </a>  
+        <a href="./routesuggestion.html">
+            <div class="feature" onclick="handleFeatureClick('menu')">
+                <img src="route.png" alt="Route Suggestion">
+                <h3>Route suggestion</h3>
+                <p>Offers optimal routes based on traffic conditions.</p>
+            </div>
+        </a>
+        <a href="./safedrivingpractices.html">
+            <div class="feature" onclick="handleFeatureClick('traffic')">
+                <img src="driving.png" alt="Safe driving practices">
+                <h3>Safe Driving Practices</h3>
+                <p>Encourage and inform users about safe driving habits.</p>
+            </div>
+        </a>
+        <a href="./about.html">
+            <div class="feature" onclick="handleFeatureClick('report')">
+                <img src="about.png" alt="About">
+                <h3>About</h3>
+                <p>Learn more about our app and team.</p>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        function handleFeatureClick(feature) {
+            console.log(`Clicked on the ${feature} feature.`);
+            // Add your feature-specific functionality here
+        }
+    </script>
+</body>
+</html>

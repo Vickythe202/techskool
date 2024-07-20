@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(19, 19, 117);
+}
+.logo{
+    text-align: center;
+background-origin: padding-box;
+border-radius: 10%;
+padding-bottom: 15px;
+}
+
+.bucket{
+    text-align: center;
+    border-style:solid;
+    max-width:30%;
+    align-content: center;    
+    border-radius: 5% 5% 5% 0%;
+    background-color: white;
+    border:white ;
+}
+h2{
+color: rgb(0, 0, 143);
+font-family:Georgia, 'Times New Roman', Times, serif ;
+padding-top: 20px;
+
+}
+
+.water{
+    font-size: smaller;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+input{
+    background-color:rgba(0, 136, 255, 0.103);
+    border-radius: 5%;
+    border-color: aliceblue;
+     border-width: 10px ;
+     border-right: 70px;
+     border-left: 70px;
+     border-style:hidden;
+     padding-right: 150px;
+     padding-top: 40px;
+    text-align:center;
+    padding-block: 20px;
+
+}
+
+button{
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px 5px 5px 0px;
+    color: white;
+    background-color:rgb(39, 78, 248); 
+    border-color: rgb(47, 47, 194);
+    border-style: hidden;
+}
